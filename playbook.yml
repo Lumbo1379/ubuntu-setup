@@ -4,3 +4,5 @@
       tags: [common]
     - role: react_development
       tags: [react, frontend]
+    - role: django_development
+      tags: [django, backend]

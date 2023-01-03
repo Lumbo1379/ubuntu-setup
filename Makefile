@@ -7,11 +7,19 @@ common: # Install common packages
 
 frontend: # Install all frontend tagged packages
 	$(ANSIBLE) --tags frontend
-.PHONY: common
+.PHONY: frontend
 
-react: # Install pakcages for React development
+react: # Install packages for React development
 	$(ANSIBLE) --tags react
-.PHONY: common
+.PHONY: react
+
+backend: # Install all backend tagged packages
+	$(ANSIBLE) --tags backend
+.PHONY: backend
+
+django: # Install packages for Django development
+	$(ANSIBLE) --tags django
+.PHONY: django
 
 help: # Print command helps
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; \
